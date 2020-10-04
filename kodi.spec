@@ -4,14 +4,12 @@
 # use the line below for pre-releases
 #global DIRVERSION %{version}%{PRERELEASE}
 %global _hardened_build 1
+%global _with_dvd 1
 
 # We support hte following options:
 # --with,
 # * dvdcss - Include DVD decryption support
 #
-# Default: Do not ship DVD decryption for legal reasons
-%bcond_with dvdcss
-
 # Optional deps (not in EPEL)
 %if 0%{?fedora}
 # (libbluray in EPEL 6 is too old.)
